@@ -28,3 +28,7 @@ Desktop.ini
 # Sphinx-doc
 /docs/build/
 !/docs/requirements.txt
+.buildpath
+.project
+*.prefs
+.settings/org.eclipse.wst.common.project.facet.core.xml
