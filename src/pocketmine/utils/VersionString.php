@@ -39,11 +39,11 @@ class VersionString{
 			$this->major = ($version >> 5) & 0x0F;
 			$this->generation = ($version >> 9) & 0x0F;
 		}else{
-			$version = preg_split("/([A-Za-z]*)[ _\\-]?([0-9]*)\\.([0-9]*)\\.{0,1}([0-9]*)(dev|)(-[\\0-9]{1,}|)/", $version, -1, PREG_SPLIT_DELIM_CAPTURE);
+			$version = preg_split("/([A-Za-z]*)[ _\\-]?([0-9]*)\\.([0-9]*)\\.{0,1}([0-9]*)(beta|)(-[\\0-9]{1,}|)/", $version, -1, PREG_SPLIT_DELIM_CAPTURE);
 			$this->generation = isset($version[2]) ? (int) $version[2] : 0; //0-15
 			$this->major = isset($version[3]) ? (int) $version[3] : 0; //0-15
 			$this->minor = isset($version[4]) ? (int) $version[4] : 0; //0-31
-			$this->development = $version[5] === "dev";
+			$this->development = $version[5] === "beta";
 			if($version[6] !== ""){
 				$this->build = (int) (substr($version[6], 1));
 			}else{
@@ -81,7 +81,7 @@ class VersionString{
 	}
 
 	public function get($build = false){
-		return $this->getRelease() . ($this->development === true ? "dev" : "") . (($this->build > 0 and $build === true) ? "-" . $this->build : "");
+		return $this->getRelease() . ($this->development === true ? "beta" : "") . (($this->build > 0 and $build === true) ? "-" . $this->build : "");
 	}
 
 	public function __toString(){

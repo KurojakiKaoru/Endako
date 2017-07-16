@@ -78,7 +78,7 @@ namespace pocketmine {
 	use pocketmine\wizard\SetupWizard;
 	use raklib\RakLib;
 
-	const VERSION = "1.6.2dev";
+	const VERSION = "1.0.0beta";
 	const API_VERSION = "3.0.0-ALPHA6";
 	const CODENAME = "Unleashed";
 
@@ -411,13 +411,13 @@ namespace pocketmine {
 		$errors = 0;
 
 		if(PHP_INT_SIZE < 8){
-			$logger->critical("Running PocketMine-MP with 32-bit systems/PHP is no longer supported. Please upgrade to a 64-bit system or use a 64-bit PHP binary.");
+			$logger->critical("Running Endako with 32-bit systems/PHP is not supported. Please upgrade to a 64-bit system or use a 64-bit PHP binary.");
 			$exitCode = 1;
 			break;
 		}
 
 		if(php_sapi_name() !== "cli"){
-			$logger->critical("You must run PocketMine-MP using the CLI.");
+			$logger->critical("You must run Endako using the CLI.");
 			++$errors;
 		}
 
@@ -440,10 +440,10 @@ namespace pocketmine {
 
 		if(extension_loaded("pocketmine")){
 			if(version_compare(phpversion("pocketmine"), "0.0.1") < 0){
-				$logger->critical("You have the native PocketMine extension, but your version is lower than 0.0.1.");
+				$logger->critical("You have the native Endako extension, but your version is lower than 0.0.1.");
 				++$errors;
 			}elseif(version_compare(phpversion("pocketmine"), "0.0.4") > 0){
-				$logger->critical("You have the native PocketMine extension, but your version is higher than 0.0.4.");
+				$logger->critical("You have the native Endako extension, but your version is higher than 0.0.4.");
 				++$errors;
 			}
 		}
@@ -504,7 +504,7 @@ namespace pocketmine {
 
 
 		if(\Phar::running(true) === ""){
-			$logger->warning("Non-packaged PocketMine-MP installation detected, do not use on production.");
+			$logger->warning("Non-packaged Endako installation detected, do not use on production.");
 		}
 
 		ThreadManager::init();
