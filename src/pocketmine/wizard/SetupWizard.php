@@ -32,7 +32,7 @@ use pocketmine\utils\Config;
 use pocketmine\utils\Utils;
 
 class SetupWizard{
-	const DEFAULT_NAME = "Minecraft Server";
+	const DEFAULT_NAME = "Minecraft: PE Server";
 	const DEFAULT_PORT = 19132;
 	const DEFAULT_MEMORY = 256;
 	const DEFAULT_PLAYERS = 20;
@@ -45,8 +45,8 @@ class SetupWizard{
 
 	}
 
-	public function run(){
-		$this->message("Endako set-up wizard");
+	public function run() : bool{
+		$this->message("PocketMine-MP set-up wizard");
 
 		$langs = BaseLang::getLanguageList();
 		if(empty($langs)){
@@ -91,7 +91,7 @@ class SetupWizard{
 		return true;
 	}
 
-	private function showLicense(){
+	private function showLicense() : bool{
 		$this->message($this->lang->get("welcome_to_pocketmine"));
 		echo <<<LICENSE
 
@@ -244,7 +244,7 @@ LICENSE;
 		$this->writeLine("[!] " . $message);
 	}
 
-	private function getInput(string $message, string $default = "", string $options = ""){
+	private function getInput(string $message, string $default = "", string $options = "") : string{
 		$message = "[?] " . $message;
 
 		if($options !== "" or $default !== ""){

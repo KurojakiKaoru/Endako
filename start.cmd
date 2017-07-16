@@ -1,5 +1,5 @@
 @echo off
-TITLE Endako server software for Minecraft: Pocket Edition
+TITLE PocketMine-MP server software for Minecraft: Pocket Edition
 cd /d %~dp0
 
 if exist bin\php\php.exe (
@@ -15,7 +15,7 @@ if exist PocketMine-MP.phar (
 	if exist src\pocketmine\PocketMine.php (
 		set POCKETMINE_FILE=src\pocketmine\PocketMine.php
 	) else (
-		echo "Couldn't find a valid Endako installation"
+		echo "Couldn't find a valid PocketMine-MP installation"
 		pause
 		exit 1
 	)
