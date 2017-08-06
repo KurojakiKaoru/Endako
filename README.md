@@ -3,7 +3,7 @@
 __A highly customisable, open source server software for Minecraft: Pocket Edition written in PHP__
 
 ### Supported Minecraft Version
-v1.1.3
+v1.2.0.7
 
 ### Can I contribute?
 Yes you can! Contributions are welcomed provided that they comply with our [Contributing Guidelines](CONTRIBUTING.md). Please ensure you read the relevant sections of the guidelines carefully before making a Pull Request or opening an Issue.
