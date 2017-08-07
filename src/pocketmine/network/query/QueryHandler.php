@@ -48,7 +48,7 @@ class QueryHandler{
 		we can identify	Query packets and remove them from the packet queue.
 
 		Then, the Query class handles itself sending the packets in raw form, because
-		packets can conflict with the MCPE ones.
+		packets can conflict with the Minecraft ones.
 		*/
 
 		$this->regenerateToken();
