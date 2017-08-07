@@ -78,7 +78,7 @@ namespace pocketmine {
 	use pocketmine\wizard\SetupWizard;
 	use raklib\RakLib;
 
-	const VERSION = "1.0.0";
+	const VERSION = "1.0.0beta";
 	const API_VERSION = "3.0.0-ALPHA7";
 	const CODENAME = "Beta";
 
