@@ -81,6 +81,7 @@ namespace pocketmine {
 	const VERSION = "1.0.0beta";
 	const API_VERSION = "3.0.0-ALPHA7";
 	const CODENAME = "Beta";
+	const ENDAKO_API_VERSION = "1.0.0";
 
 	/*
 	 * Startup code. Do not look at it, it may harm you.
