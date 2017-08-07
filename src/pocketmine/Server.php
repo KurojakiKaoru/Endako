@@ -270,7 +270,7 @@ class Server{
 	 * @return string
 	 */
 	public function getName() : string{
-		return "PocketMine-MP";
+		return "Endako";
 	}
 
 	/**
@@ -1441,7 +1441,7 @@ class Server{
 
 			$this->logger->info("Loading server properties...");
 			$this->properties = new Config($this->dataPath . "server.properties", Config::PROPERTIES, [
-				"motd" => "Minecraft: PE Server",
+				"motd" => "Minecraft Server",
 				"server-port" => 19132,
 				"white-list" => false,
 				"announce-player-achievements" => true,
